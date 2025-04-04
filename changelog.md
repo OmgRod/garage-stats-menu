@@ -1,5 +1,9 @@
 # Stats Display API Changelog
 
+## v1.0.4
+
+- Changed mod ID
+
 ## v1.0.3
 
 - Ported to iOS
