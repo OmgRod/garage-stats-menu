@@ -24,6 +24,7 @@ bool StatsGarageLayer::init() {
 	}
 
 	m_fields->m_statsMenu->setID("stats-menu"_spr);
+	m_fields->m_statsMenu->setZOrder(2);
 	m_fields->m_statsMenu->setLayout(ColumnLayout::create()->setAutoScale(false)->setAxisReverse(true)->setAxisAlignment(AxisAlignment::End)->setCrossAxisAlignment(AxisAlignment::End)->setGap(15));
 	this->addChild(m_fields->m_statsMenu);
 	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height / 2 - 12));
