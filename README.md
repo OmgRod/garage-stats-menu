@@ -6,7 +6,7 @@ Make sure to declare Stats Display API as a dependency in your 'mod.json'
 ```json
 "dependencies": [
 	{
-		"id": "capeling.garage-stats-menu",
+		"id": "omgrod.garage-stats-menu",
 		"version": ">=v1.0.1",
 		"importance": "required"
 	}
@@ -15,7 +15,7 @@ Make sure to declare Stats Display API as a dependency in your 'mod.json'
 
 Then include the API in your source file
 
-`#include <capeling.garage-stats-menu/include/StatsDisplayAPI.h>`
+`#include <omgrod.garage-stats-menu/include/StatsDisplayAPI.h>`
 
 ## Usage
 `StatsDisplayAPI::getNewItem` Has 4 things you need to pass through it
@@ -37,7 +37,7 @@ class $modify(GJGarageLayer) {
 		if (!GJGarageLayer::init())
 			return false;
 
-		auto statMenu = this->getChildByID("capeling.garage-stats-menu/stats-menu");
+		auto statMenu = this->getChildByID("omgrod.garage-stats-menu/stats-menu");
 
 		auto myStatItem = StatsDisplayAPI::getNewItem("fire-shards"_spr, CCSprite::createWithSpriteFrameName("fireShardSmall_001.png"), GameStatsManager::sharedState()->getStat("16"), 0.8f);
 
@@ -53,7 +53,7 @@ class $modify(GJGarageLayer) {
 
 If in any case the stats menu does not exist, you should check to make sure that it is not nullptr before adding your item
 ```cpp
-auto statMenu = this->getChildByID("capeling.garage-stats-menu/stats-menu");
+auto statMenu = this->getChildByID("omgrod.garage-stats-menu/stats-menu");
 if (statMenu) {
 	statMenu->addChild(myStatItem);
 	statMenu->updateLayout();

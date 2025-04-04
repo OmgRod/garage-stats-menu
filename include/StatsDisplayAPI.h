@@ -3,7 +3,7 @@
 #include <Geode/Geode.hpp>
 
 #ifdef GEODE_IS_WINDOWS
-	#ifdef CAPELING_STATSAPI_EXPORTING
+	#ifdef OMGROD_STATSAPI_EXPORTING
 		#define STATS_API_DLL __declspec(dllexport)
 	#else
 		#define STATS_API_DLL __declspec(dllimport)
