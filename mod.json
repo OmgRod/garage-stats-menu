@@ -6,7 +6,7 @@
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "omgrod.garage-stats-menu",
+	"id": "capeling.garage-stats-menu",
 	"name": "Stats Display API",
 	"version": "v1.0.3",
 	"developer": "OmgRod",
@@ -24,10 +24,6 @@
 	},
 	"incompatibilities": {
 		"devcmb.cleanermenu": {
-			"importance": "conflicting",
-			"version": ">=1.0.0"
-		},
-		"capeling.garage-stats-menu": {
 			"importance": "conflicting",
 			"version": ">=1.0.0"
 		}
