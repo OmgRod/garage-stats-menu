@@ -43,6 +43,8 @@ bool StatsGarageLayer::init() {
 	m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - CCSprite::createWithSpriteFrameName("GJ_sideArt_001.png")->getScaledContentHeight());
 	m_fields->m_statsMenu->setAnchorPoint(ccp(0.5f, 1.f));
 
+	m_fields->m_statsMenu->updateLayout();
+
 	return true;
 }
 

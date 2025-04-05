@@ -1,5 +1,9 @@
 # Stats Display API Changelog
 
+## v1.1.1
+
+- Fixed a really bad bug (stats were all on top of each other)
+
 ## v1.1.0
 
 - Added Capeling back as a developer
