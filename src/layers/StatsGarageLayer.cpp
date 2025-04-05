@@ -41,7 +41,7 @@ bool StatsGarageLayer::init() {
 	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamonds", CCSprite::createWithSpriteFrameName("GJ_diamondsIcon_001.png"), GameStatsManager::sharedState()->getStat("13"), 0.6f));
 	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamond-shards", CCSprite::createWithSpriteFrameName("currencyDiamondIcon_001.png"), GameStatsManager::sharedState()->getStat("29"), 0.54f));
 
-	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height - 12));
+	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height - 30));
 
 	auto tempSprite = CCSprite::createWithSpriteFrameName("GJ_sideArt_001.png");
 	if (tempSprite) {
@@ -55,12 +55,14 @@ bool StatsGarageLayer::init() {
 	m_fields->m_statsMenu->updateLayout();
 
 	if (PagesAPI::isLoaded()) {
-		PagesAPI::enablePages(m_fields->m_statsMenu, true);
-		PagesAPI::setMax(m_fields->m_statsMenu, 10.f);
-		PagesAPI::setButtonScale(m_fields->m_statsMenu, 0.5f);
+		PageMenu* pageMenu = static_cast<PageMenu*>(m_fields->m_statsMenu); 
+		pageMenu->setPaged(15, PageOrientation::VERTICAL, m_fields->m_statsMenu->getContentHeight(), 12.f);
+		pageMenu->setButtonScale(0.6f);
+		// pageMenu->setPosition(ccp(winSize.width - 18, winSize.height - 12));
+		// pageMenu->setAnchorPoint(ccp(0.5f, 1.f));
 	}
 
-	m_fields->m_statsMenu->updateLayout();
+	// m_fields->m_statsMenu->updateLayout();
 
 	return true;
 }

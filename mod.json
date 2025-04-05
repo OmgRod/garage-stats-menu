@@ -23,7 +23,7 @@
 		},
 		"alphalaneous.pages_api": {
 			"version": ">=v1.4.9",
-			"importance": "recommended"
+			"importance": "required"
 		}
 	},
 	"incompatibilities": {
