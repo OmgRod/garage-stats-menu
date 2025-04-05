@@ -24,7 +24,7 @@ namespace StatsDisplayAPI {
 
 		auto label = cocos2d::CCLabelBMFont::create(std::to_string(displayedNum).c_str(), "bigFont.fnt");
 		label->setID(ID + "-label");
-		label->setScale({ 0.34 });
+		label->setScale(0.34f);
 		label->setAnchorPoint({ 1, 0.5 });
 		label->removeFromParentAndCleanup(false);
 		label->setPosition({ -12, 0.5 });
