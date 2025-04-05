@@ -1,6 +1,6 @@
 # Stats Display API Changelog
 
-## v1.0.5
+## v1.1.0
 
 - Added Capeling back as a developer
 - Auto-scale and resize stats menu
