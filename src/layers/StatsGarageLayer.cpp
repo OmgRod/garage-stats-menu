@@ -1,4 +1,5 @@
 #include "StatsGarageLayer.h"
+#include <StatsDisplayAPI.h>
 
 using namespace geode::prelude;
 
@@ -10,6 +11,7 @@ bool StatsGarageLayer::init() {
 
 	m_fields->m_statsMenu = CCMenu::create();
 
+	/*
 	m_fields->m_nodeContainer.push_back(getExistingContainer("stars"));
 	m_fields->m_nodeContainer.push_back(getExistingContainer("moons"));
 	m_fields->m_nodeContainer.push_back(getExistingContainer("coins"));
@@ -22,16 +24,29 @@ bool StatsGarageLayer::init() {
 		//m_fields->m_nodeContainer[i]->setLayout(AxisLayout::create()->setAutoScale(false)->setAxisReverse(true));
 		m_fields->m_statsMenu->addChild(m_fields->m_nodeContainer[i]);
 	}
+	*/
 
 	m_fields->m_statsMenu->setID("stats-menu"_spr);
 	m_fields->m_statsMenu->setZOrder(2);
-	m_fields->m_statsMenu->setLayout(ColumnLayout::create()->setAutoScale(false)->setAxisReverse(true)->setAxisAlignment(AxisAlignment::End)->setCrossAxisAlignment(AxisAlignment::End)->setGap(15));
+	m_fields->m_statsMenu->setLayout(ColumnLayout::create()->setAutoScale(false)->setAxisReverse(true)->setAxisAlignment(AxisAlignment::End)->setCrossAxisAlignment(AxisAlignment::End)->setGap(15)->setAutoScale(true));
+	
 	this->addChild(m_fields->m_statsMenu);
-	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height / 2 - 12));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("stars", CCSprite::createWithSpriteFrameName("GJ_starsIcon_001.png"), GameStatsManager::sharedState()->getStat("6"), 0.54f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("moons", CCSprite::createWithSpriteFrameName("GJ_moonsIcon_001.png"), GameStatsManager::sharedState()->getStat("28"), 0.54f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("coins", CCSprite::createWithSpriteFrameName("GJ_coinsIcon_001.png"), GameStatsManager::sharedState()->getStat("8"), 0.51f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("user-coins", CCSprite::createWithSpriteFrameName("GJ_coinsIcon2_001.png"), GameStatsManager::sharedState()->getStat("12"), 0.51f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("orbs", CCSprite::createWithSpriteFrameName("currencyOrbIcon_001.png"), GameStatsManager::sharedState()->getStat("14"), 0.54f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamonds", CCSprite::createWithSpriteFrameName("GJ_diamondsIcon_001.png"), GameStatsManager::sharedState()->getStat("13"), 0.6f));
+	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamond-shards", CCSprite::createWithSpriteFrameName("currencyDiamondIcon_001.png"), GameStatsManager::sharedState()->getStat("29"), 0.54f));
+
+	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height - 12));
+	m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - CCSprite::createWithSpriteFrameName("GJ_sideArt_001.png")->getScaledContentHeight());
+	m_fields->m_statsMenu->setAnchorPoint(ccp(0.5f, 1.f));
 
 	return true;
 }
 
+/*
 CCNode* StatsGarageLayer::getExistingContainer(std::string itemName) {
 	auto ret = CCMenu::create(); 
 	auto icon = this->getChildByID(itemName + "-icon");
@@ -50,3 +65,4 @@ CCNode* StatsGarageLayer::getExistingContainer(std::string itemName) {
 	ret->setContentSize({ 0, 0 });
 	return ret;
 }
+*/

@@ -8,8 +8,8 @@
 	},
 	"id": "capeling.garage-stats-menu",
 	"name": "Stats Display API",
-	"version": "v1.0.4",
-	"developer": "OmgRod",
+	"version": "v1.0.5",
+	"developers": ["OmgRod", "Capeling"],
 	"description": "Allows mods to easily add custom stats into the icon kit",
 	"api": {
 		"include": [

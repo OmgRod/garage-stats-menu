@@ -1,5 +1,10 @@
 # Stats Display API Changelog
 
+## v1.0.5
+
+- Added Capeling back as a developer
+- Auto-scale and resize stats menu
+
 ## v1.0.4
 
 - Changed mod ID
