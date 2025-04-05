@@ -20,6 +20,10 @@
 		"geode.node-ids": {
 			"version": ">=v1.20.0",
 			"importance": "required"
+		},
+		"alphalaneous.pages_api": {
+			"version": ">=v1.4.9",
+			"importance": "recommended"
 		}
 	},
 	"incompatibilities": {

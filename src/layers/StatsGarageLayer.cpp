@@ -1,5 +1,7 @@
 #include "StatsGarageLayer.h"
 #include <StatsDisplayAPI.h>
+#include <alphalaneous.pages_api/include/PagesAPI.h>
+#include <alphalaneous.pages_api/include/PageMenu.h>
 
 using namespace geode::prelude;
 
@@ -40,8 +42,23 @@ bool StatsGarageLayer::init() {
 	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamond-shards", CCSprite::createWithSpriteFrameName("currencyDiamondIcon_001.png"), GameStatsManager::sharedState()->getStat("29"), 0.54f));
 
 	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height - 12));
-	m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - CCScene::get()->getChildByID("GJGarageLayer")->getChildByID("bottom-right-corner")->getScaledContentHeight());
+
+	auto tempSprite = CCSprite::createWithSpriteFrameName("GJ_sideArt_001.png");
+	if (tempSprite) {
+		float height = tempSprite->getScaledContentHeight();
+		tempSprite->release();
+		m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - height);
+	}
+
 	m_fields->m_statsMenu->setAnchorPoint(ccp(0.5f, 1.f));
+
+	m_fields->m_statsMenu->updateLayout();
+
+	if (PagesAPI::isLoaded()) {
+		PagesAPI::enablePages(m_fields->m_statsMenu, true);
+		PagesAPI::setMax(m_fields->m_statsMenu, 10.f);
+		PagesAPI::setButtonScale(m_fields->m_statsMenu, 0.5f);
+	}
 
 	m_fields->m_statsMenu->updateLayout();
 
