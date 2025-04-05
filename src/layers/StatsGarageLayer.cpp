@@ -40,7 +40,7 @@ bool StatsGarageLayer::init() {
 	m_fields->m_statsMenu->addChild(StatsDisplayAPI::getNewItem("diamond-shards", CCSprite::createWithSpriteFrameName("currencyDiamondIcon_001.png"), GameStatsManager::sharedState()->getStat("29"), 0.54f));
 
 	m_fields->m_statsMenu->setPosition(ccp(winSize.width - 18, winSize.height - 12));
-	m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - CCSprite::createWithSpriteFrameName("GJ_sideArt_001.png")->getScaledContentHeight());
+	m_fields->m_statsMenu->setContentHeight(winSize.height - 24 - CCScene::get()->getChildByID("GJGarageLayer")->getChildByID("bottom-right-corner")->getScaledContentHeight());
 	m_fields->m_statsMenu->setAnchorPoint(ccp(0.5f, 1.f));
 
 	m_fields->m_statsMenu->updateLayout();
