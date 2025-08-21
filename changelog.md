@@ -1,3 +1,7 @@
+# v1.2.1
+
+- Bugfix: Move stats up if there are no page buttons (by NyteLyte)
+
 # v1.2.0
 
 - Update to Geode v4.6.1
