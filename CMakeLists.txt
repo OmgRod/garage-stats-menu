@@ -31,6 +31,6 @@ endif()
 
 set(GEODE_LINK_NIGHTLY ON)
 
-add_subdirectory("C:/GeodeSDK" ${CMAKE_CURRENT_BINARY_DIR}/geode)
+add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 
 setup_geode_mod(${PROJECT_NAME})
