@@ -7,7 +7,7 @@
 #include <Geode/modify/GJGarageLayer.hpp>
 #include "../Macros.h"
 
-class StatsGarageLayer : public geode::Modify<StatsGarageLayer, GJGarageLayer> {
+class $modify(StatsGarageLayer, GJGarageLayer) {
 public:
 	struct Fields {
 		cocos2d::CCMenu* m_statsMenu = nullptr;

@@ -7,16 +7,17 @@ bool StatsGarageLayer::init() {
 		return false;
 
 	auto winSize = CCDirector::get()->getWinSize();
+	auto mod = Mod::get();
 
 	m_fields->m_statsMenu = CCMenu::create();
 
-	m_fields->m_nodeContainer.push_back(getExistingContainer("stars"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("moons"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("coins"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("user-coins"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("orbs"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("diamonds"));
-	m_fields->m_nodeContainer.push_back(getExistingContainer("diamond-shards"));
+	if (mod->getSettingValue<bool>("stars-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("stars"));
+	if (mod->getSettingValue<bool>("moons-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("moons"));
+	if (mod->getSettingValue<bool>("gold-coins-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("coins"));
+	if (mod->getSettingValue<bool>("user-coins-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("user-coins"));
+	if (mod->getSettingValue<bool>("orbs-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("orbs"));
+	if (mod->getSettingValue<bool>("diamonds-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("diamonds"));
+	if (mod->getSettingValue<bool>("diamond-shards-stat")) m_fields->m_nodeContainer.push_back(getExistingContainer("diamond-shards"));
 
 	for (size_t i = 0; i < m_fields->m_nodeContainer.size(); i++) {
 		//m_fields->m_nodeContainer[i]->setLayout(AxisLayout::create()->setAutoScale(false)->setAxisReverse(true));
