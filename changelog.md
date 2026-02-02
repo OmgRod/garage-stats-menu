@@ -1,6 +1,7 @@
 # v1.2.0
 
 - Update to Geode v5
+- Added stat toggle settings ([BetterGarageStats#1](https://github.com/OmgRod/BetterGarageStats/issues/1))
 
 # v1.1.0
 
