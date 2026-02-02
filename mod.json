@@ -24,12 +24,17 @@
 	},
 	"incompatibilities": {
 		"devcmb.cleanermenu": {
+	},
+	"incompatibilities": {
+		"devcmb.cleanermenu": {
 			"importance": "conflicting",
-			"version": "*"
+			"version": ">=1.0.0"
 		}
+	},
 	},
 	"issues": {
 		"info": "If you find any issues create an issue here!",
+		"url": "https://github.com/OmgRod/garage-stats-menu/issues/new"
 		"url": "https://github.com/OmgRod/garage-stats-menu/issues/new"
 	},
 	"tags": [

@@ -15,6 +15,8 @@ public:
 	};
 	$override
 	bool init();
+	
+  void moveMenuForArrows(float);
 
 	cocos2d::CCNode* getExistingContainer(std::string itemName);
 
