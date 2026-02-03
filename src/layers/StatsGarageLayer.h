@@ -16,9 +16,9 @@ public:
 	$override
 	bool init();
 	
-  void moveMenuForArrows(float);
+	void moveMenuForArrows(float);
 
-	cocos2d::CCNode* getExistingContainer(std::string itemName);
+	// cocos2d::CCNode* getExistingContainer(std::string itemName);
 
 	EARLY_MODIFY(GJGarageLayer::init);
 };
