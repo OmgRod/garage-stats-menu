@@ -18,8 +18,21 @@
 
 # v1.1.0
 
-- Update to Geode v4.6.1
-- Add API tag
+- Added Capeling back as a developer
+- Auto-scale and resize stats menu
+
+# v1.0.4
+
+- Changed mod ID
+
+# v1.0.3
+
+- Ported to iOS
+- Bugfix for issue in which the stats menu goes under the corner if too many stats are added
+
+# v1.0.2
+
+- 2.207 support
 
 # v1.0.1
 
