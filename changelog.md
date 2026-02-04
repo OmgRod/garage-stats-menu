@@ -1,3 +1,7 @@
+# v1.3.1-beta.1
+
+- Add API tag
+
 # v1.3.0
 
 - Update to Geode v5
