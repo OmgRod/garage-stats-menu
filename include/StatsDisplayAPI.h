@@ -2,18 +2,10 @@
 
 #include <Geode/Geode.hpp>
 
-#ifdef GEODE_IS_WINDOWS
-	#ifdef OMGROD_STATSAPI_EXPORTING
-		#define STATS_API_DLL __declspec(dllexport)
-	#else
-		#define STATS_API_DLL __declspec(dllimport)
-	#endif
-	#else
-		#define STATS_API_DLL
-#endif
+
 
 namespace StatsDisplayAPI {
-	inline STATS_API_DLL cocos2d::CCNode* getNewItem(std::string ID, cocos2d::CCNode* displayNode, int displayedNum, float nodeScale = 0.5f) {
+	inline cocos2d::CCNode* getNewItem(std::string ID, cocos2d::CCNode* displayNode, int displayedNum, float nodeScale = 0.5f) {
 		auto ret = cocos2d::CCMenu::create();
 
 		displayNode->setID(ID + "-icon");
