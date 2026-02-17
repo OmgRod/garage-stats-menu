@@ -1,3 +1,7 @@
+# v1.3.1-beta.2
+
+- Fix ODR issue (i hope)
+
 # v1.3.1-beta.1
 
 - Add API tag

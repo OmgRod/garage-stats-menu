@@ -13,7 +13,7 @@
 #endif
 
 namespace StatsDisplayAPI {
-	cocos2d::CCNode* getNewItem(std::string ID, cocos2d::CCNode* displayNode, int displayedNum, float nodeScale = 0.5f) {
+	inline STATS_API_DLL cocos2d::CCNode* getNewItem(std::string ID, cocos2d::CCNode* displayNode, int displayedNum, float nodeScale = 0.5f) {
 		auto ret = cocos2d::CCMenu::create();
 
 		displayNode->setID(ID + "-icon");
