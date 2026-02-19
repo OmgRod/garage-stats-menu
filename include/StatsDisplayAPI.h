@@ -2,8 +2,6 @@
 
 #include <Geode/Geode.hpp>
 
-
-
 namespace StatsDisplayAPI {
 	inline cocos2d::CCNode* getNewItem(std::string ID, cocos2d::CCNode* displayNode, int displayedNum, float nodeScale = 0.5f) {
 		auto ret = cocos2d::CCMenu::create();

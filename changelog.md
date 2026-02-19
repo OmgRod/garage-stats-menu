@@ -1,3 +1,8 @@
+# v1.3.1-beta.3
+
+- Updated to beta 3 (if not done so yet)
+- Fixed dependency syntax in `mod.json`
+
 # v1.3.1-beta.2
 
 - Fix ODR issue (i hope)

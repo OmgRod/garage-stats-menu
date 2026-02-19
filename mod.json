@@ -8,7 +8,7 @@
 	},
 	"id": "capeling.garage-stats-menu",
 	"name": "Stats Display API",
-	"version": "v1.3.1-beta.2",
+	"version": "v1.3.1-beta.3",
 	"developers": ["Capeling", "OmgRod"],
 	"description": "Allows mods to easily add custom stats into the icon kit",
 	"api": {
@@ -19,11 +19,11 @@
 	"dependencies": {
 		"geode.node-ids": {
 			"version": ">=v1.21.1",
-			"importance": "required"
+			"required": true
 		},
 		"raydeeux.pages_api": {
 			"version": ">=v1.4.11",
-			"importance": "required"
+			"required": true
 		}
 	},
 	"incompatibilities": {
