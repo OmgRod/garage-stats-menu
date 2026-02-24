@@ -6,19 +6,18 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/GJGarageLayer.hpp>
 #include "../Macros.h"
+#include "../CCMenuGSM.hpp"
 
 class $modify(StatsGarageLayer, GJGarageLayer) {
 public:
 	struct Fields {
-		cocos2d::CCMenu* m_statsMenu = nullptr;
+		CCMenuGSM* m_statsMenu = nullptr;
 		std::vector<cocos2d::CCNode*> m_nodeContainer = {};
 	};
 	$override
 	bool init();
 	
 	void moveMenuForArrows(float);
-
-	// cocos2d::CCNode* getExistingContainer(std::string itemName);
 
 	EARLY_MODIFY(GJGarageLayer::init);
 };

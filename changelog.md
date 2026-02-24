@@ -1,7 +1,9 @@
-# v1.3.1-beta.3
+# v2.0.0
 
-- Updated to beta 3 (if not done so yet)
+- Updated to v5 (release)
 - Fixed dependency syntax in `mod.json`
+- Fixed bug involving stats being center aligned instead of end aligned (thanks to @percival254 on Discord for reporting this bug)
+- Tidied up loads of code
 
 # v1.3.1-beta.2
 
@@ -45,7 +47,7 @@
 
 # v1.0.1
 
-- Fix for other platforms (Hopefully)
+- Fix for other platforms (hopefully)
 
 # v1.0.0
 
