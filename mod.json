@@ -1,5 +1,5 @@
 {
-	"geode": "5.0.1",
+	"geode": "5.0.0-beta.3",
 	"gd": {
 		"win": "2.2081",
 		"android": "2.2081",
@@ -8,7 +8,7 @@
 	},
 	"id": "capeling.garage-stats-menu",
 	"name": "Stats Display API",
-	"version": "v1.3.1",
+	"version": "v1.3.1-beta.3",
 	"developers": ["Capeling", "OmgRod"],
 	"description": "Allows mods to easily add custom stats into the icon kit",
 	"api": {
