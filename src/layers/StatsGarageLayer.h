@@ -11,14 +11,19 @@ class $modify(StatsGarageLayer, GJGarageLayer) {
 public:
 	struct Fields {
 		cocos2d::CCMenu* m_statsMenu = nullptr;
-		std::vector<cocos2d::CCNode*> m_nodeContainer = {};
+		int m_prevActualChildren = 0;
+		int m_currentPage = 0;
+		int m_requestedPage = 0;
+		std::vector<cocos2d::CCNode*> m_previousActualChildren = {};
+		CCMenuItemSpriteExtra* m_prevArrow;
+		CCMenuItemSpriteExtra* m_nextArrow;
 	};
 	$override
 	bool init();
 	
-	void moveMenuForArrows(float);
+	void switchPage(CCObject*);
+	void pageChildren(float);
 
-	// cocos2d::CCNode* getExistingContainer(std::string itemName);
 
 	EARLY_MODIFY(GJGarageLayer::init);
 };

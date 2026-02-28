@@ -1,7 +1,8 @@
-# v1.3.1-beta.3
+# v1.3.1
 
-- Updated to beta 3 (if not done so yet)
+- Updated to v5.2.0
 - Fixed dependency syntax in `mod.json`
+- [Fixed stat paging (by NyteLyte)](https://github.com/OmgRod/garage-stats-menu/pull/3)
 
 # v1.3.1-beta.2
 
@@ -18,7 +19,7 @@
 
 # v1.2.1
 
-- Bugfix: Move stats up if there are no page buttons (by NyteLyte)
+- [Bugfix: Move stats up if there are no page buttons (by NyteLyte)](https://github.com/OmgRod/garage-stats-menu/pull/1)
 
 # v1.2.0
 
